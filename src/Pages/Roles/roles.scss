@@ -1,0 +1,40 @@
+$myflex:flex;
+$bgcolor:green;
+.flex-container {
+    display: $myflex;
+    justify-content: center;
+    background-color: DodgerBlue;
+    flex-wrap: wrap;
+    width: 100%;  
+    height: auto;
+    align-content: space-around;
+    align-items: baseline;
+
+    div {
+      background-color: $bgcolor;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 100px;
+      font-size: 30px;
+    }
+  }
+  
+  .two {
+      order: 1;
+     
+  }
+
+  @media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+    .flex-container > div {
+        background-color: #f1f1f1;
+        width: 90%;
+        margin: 10px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 30px;
+      }
+  }  
